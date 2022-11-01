@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# урок 2 задание 1
 import pytest
 from model.group import Group
 from fixture.application import Application
