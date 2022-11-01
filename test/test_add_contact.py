@@ -2,7 +2,7 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import unittest
-from contact import Contact
+from model.contact import Contact
 options = Options()
 options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
 
