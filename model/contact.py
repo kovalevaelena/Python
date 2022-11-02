@@ -4,3 +4,4 @@ class Contact:
         self.firstname=firstname
         self.lastname=lastname
         self.mobile=mobile
+
