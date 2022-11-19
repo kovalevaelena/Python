@@ -1,4 +1,4 @@
-
+# задание к уроку 2
 class SessionHelper:
 
     def __init__(self, app):
@@ -11,8 +11,9 @@ class SessionHelper:
         wd.find_element_by_name("pass").send_keys(password)
         wd.find_element_by_xpath("//input[@value='Login']").click()
 
-    # не работает логаут
+    # работает логаут
 
     def logout(self):
         wd = self.app.wd
         wd.find_element_by_link_text("Logout").click()
+        wd.find_element_by_name("user")

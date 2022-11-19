@@ -1,3 +1,4 @@
+# задание к уроку 2
 class Group:
 
     def __init__(self, name, header,footer):

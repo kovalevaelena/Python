@@ -1,3 +1,4 @@
+# задание к уроку 2
 class Contact:
 
     def __init__(self, firstname, lastname, mobile):
