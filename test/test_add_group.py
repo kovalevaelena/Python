@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# задание к уроку 3_2
+# задание к уроку 3_3
 from model.group import Group
 
 

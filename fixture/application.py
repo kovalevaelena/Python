@@ -1,4 +1,4 @@
-# задание к уроку 3_2
+# задание к уроку 3_3
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.contact import ContactHelper
@@ -11,7 +11,7 @@ options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
 class Application:
     def __init__(self):
         self.wd = webdriver.Firefox(executable_path=r'C:\windows\system32\geckodriver.exe', options=options)
-        self.wd.implicitly_wait(30)
+        self.wd.implicitly_wait(5)
         self.session = SessionHelper(self)
         self.group = GroupHelper(self)
         self.contact = ContactHelper(self)

@@ -1,4 +1,4 @@
-# задание к уроку 3_2
+# задание к уроку 3_3
 class Group:
 
     def __init__(self, name=None, header=None,footer=None):

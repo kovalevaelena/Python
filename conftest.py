@@ -1,4 +1,4 @@
-# задание к уроку 3_2
+# задание к уроку 3_3
 import pytest
 from fixture.application import Application
 
