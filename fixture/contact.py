@@ -50,3 +50,8 @@ class ContactHelper:
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys("mobile changed")
         wd.find_element_by_xpath("//div[@id='content']/form/input[22]").click()
+
+    def count(self):
+        wd = self.app.wd
+        self.open_home_page()
+        return len(wd.find_elements_by_name("selected[]"))
