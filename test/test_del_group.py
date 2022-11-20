@@ -1,4 +1,5 @@
-# задание к уроку 3.1
+# задание к уроку 2
+
 from model.group import Group
 
 
