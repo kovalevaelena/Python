@@ -1,4 +1,4 @@
-# задание к уроку 3.1
+# задание к уроку 3_2
 
 class ContactHelper:
     def __init__(self, app):

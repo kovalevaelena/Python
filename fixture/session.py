@@ -1,4 +1,4 @@
-# задание к уроку 3.2
+# задание к уроку 3_2
 class SessionHelper:
 
     def __init__(self, app):

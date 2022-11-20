@@ -1,4 +1,4 @@
-
+# задание к уроку 3_2
 class GroupHelper:
     def __init__(self, app):
         self.app = app
