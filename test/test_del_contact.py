@@ -1,4 +1,4 @@
-# задание к уроку 3_3
+# задание к уроку 4
 from model.contact import Contact
 
 
