@@ -1,4 +1,4 @@
-# задание к уроку 4(кеширование и хеширование)
+# задание к уроку 4(рандом)
 import pytest
 from fixture.application import Application
 

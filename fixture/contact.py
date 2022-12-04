@@ -1,4 +1,4 @@
-# задание к уроку 4(кеширование и хеширование)
+# задание к уроку 4(рандом)
 from model.contact import Contact
 class ContactHelper:
     def __init__(self, app):
@@ -19,13 +19,19 @@ class ContactHelper:
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.contact_cache = None
+
     def del_first_contact(self):
+        self.del_contact_by_index(0)
+
+    def del_contact_by_index(self, index):
         wd = self.app.wd
         self.open_home_page()
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_xpath("//input[@value='Delete']").click()
         wd.switch_to.alert.accept()
+        self.open_home_page()
         self.contact_cache = None
+
     def open_new_contact_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
@@ -35,10 +41,10 @@ class ContactHelper:
         wd.find_element_by_link_text("home").click()
 
         # модификация контакта к уроку №2
-    def change_contact(self):
+    def change_contact(self, index):
         wd = self.app.wd
         self.open_home_page()
-        wd.find_element_by_name("selected[]").click()
+        wd.find_elements_by_name("selected[]")[index].click()
         wd.find_element_by_xpath("//img[@alt='Edit']").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
@@ -48,7 +54,7 @@ class ContactHelper:
         wd.find_element_by_name("lastname").send_keys("lastname changed")
         wd.find_element_by_name("mobile").click()
         wd.find_element_by_name("mobile").clear()
-        wd.find_element_by_name("mobile").send_keys("mobile changed")
+        wd.find_element_by_name("mobile").send_keys("mobilexxx zzzchanged")
         wd.find_element_by_xpath("//div[@id='content']/form/input[22]").click()
         self.open_home_page()
         self.contact_cache = None
