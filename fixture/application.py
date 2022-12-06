@@ -1,4 +1,4 @@
-# задание к уроку 4.1
+# задание к уроку 4
 from fixture.session import SessionHelper
 from fixture.group import GroupHelper
 from fixture.contact import ContactHelper

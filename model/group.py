@@ -1,9 +1,9 @@
-# задание к уроку 4(рандом)
+# задание к уроку 4
 
 from sys import maxsize
 class Group:
 
-    def __init__(self, name=None, header=None,footer=None,  id=None):
+    def __init__(self, name=None, header=None, footer=None,  id=None):
         self.name=name
         self.header=header
         self.footer=footer

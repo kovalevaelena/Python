@@ -1,4 +1,4 @@
-# задание к уроку 4(рандом)
+# задание к уроку 4
 from model.contact import Contact
 class ContactHelper:
     def __init__(self, app):
@@ -18,6 +18,7 @@ class ContactHelper:
         wd.find_element_by_name("mobile").clear()
         wd.find_element_by_name("mobile").send_keys(contact.mobile)
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        self.open_home_page()
         self.contact_cache = None
 
     def del_first_contact(self):
@@ -41,11 +42,27 @@ class ContactHelper:
         wd.find_element_by_link_text("home").click()
 
         # модификация контакта к уроку №2
-    def change_contact(self, index):
+    def change_contact_by_index(self, index):
         wd = self.app.wd
         self.open_home_page()
-        wd.find_elements_by_name("selected[]")[index].click()
-        wd.find_element_by_xpath("//img[@alt='Edit']").click()
+        wd.find_element_by_xpath(".//tr["+str(index)+"]/td[8]/a/img").click()
+        wd.find_element_by_name("firstname").click()
+        wd.find_element_by_name("firstname").clear()
+        wd.find_element_by_name("firstname").send_keys("firstname changed")
+        wd.find_element_by_name("lastname").click()
+        wd.find_element_by_name("lastname").clear()
+        wd.find_element_by_name("lastname").send_keys("lastname changed")
+        wd.find_element_by_name("mobile").click()
+        wd.find_element_by_name("mobile").clear()
+        wd.find_element_by_name("mobile").send_keys("mobilexxx zzzchanged")
+        wd.find_element_by_xpath("//div[@id='content']/form/input[22]").click()
+        self.open_home_page()
+        self.contact_cache = None
+
+    def change_first_contact(self):
+        wd = self.app.wd
+        self.open_home_page()
+        wd.find_element_by_xpath(".//tr[2]/td[8]/a/img").click()
         wd.find_element_by_name("firstname").click()
         wd.find_element_by_name("firstname").clear()
         wd.find_element_by_name("firstname").send_keys("firstname changed")
@@ -73,8 +90,8 @@ class ContactHelper:
             self.contact_cache = []
             for element in wd.find_elements_by_name("entry"):
                     id = element.find_element_by_name("selected[]").get_attribute("value")
-                    lastname = element.find_element_by_xpath("//td[2]").text
-                    firstname = element.find_element_by_xpath("//td[3]").text
-                    mobile = element.find_element_by_xpath("//td[6]").text
+                    lastname = element.find_element_by_xpath(".//td[2]").text
+                    firstname = element.find_element_by_xpath(".//td[3]").text
+                    mobile = element.find_element_by_xpath(".//td[6]").text
                     self.contact_cache.append(Contact(lastname = lastname, firstname = firstname, mobile = mobile, id = id))
         return list(self.contact_cache)

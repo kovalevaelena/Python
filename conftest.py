@@ -1,4 +1,4 @@
-# задание к уроку 4(рандом)
+# задание к уроку 4
 import pytest
 from fixture.application import Application
 

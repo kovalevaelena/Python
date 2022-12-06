@@ -1,4 +1,4 @@
-# задание к уроку 4(рандом)
+# задание к уроку 4
 
 from sys import maxsize
 class Contact:
@@ -13,7 +13,7 @@ class Contact:
         return "%s:%s:%s:%s" % (self.id, self.lastname, self.firstname, self.mobile)
 
     def __eq__(self, other):
-        return (self.id is None or other.id is None or self.id == other.id) and self.lastname == other.lastname and self.firstname == other.firstname #and self.mobile == other.mobile
+        return (self.id is None or other.id is None or self.id == other.id) and self.lastname == other.lastname and self.firstname == other.firstname and self.mobile == other.mobile
 
     def id_or_max(self):
         if self.id:
