@@ -1,4 +1,4 @@
-# задание к уроку 4
+# задание к уроку 4.3
 
 from model.group import Group
 from random import randrange

@@ -1,4 +1,4 @@
-# задание к уроку 4
+# задание к уроку 4.3
 
 from sys import maxsize
 class Group:

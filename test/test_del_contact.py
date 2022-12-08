@@ -1,4 +1,4 @@
-# задание к уроку 4
+# задание к уроку 4.3
 from model.contact import Contact
 from random import randrange
 

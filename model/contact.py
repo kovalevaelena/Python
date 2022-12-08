@@ -1,9 +1,9 @@
-# задание к уроку 4
+# задание к уроку 4.3
 
 from sys import maxsize
 class Contact:
 
-    def __init__(self, firstname= None, lastname= None, mobile= None, id = None):
+    def __init__(self, firstname: object = None, lastname: object = None, mobile: object = None, id: object = None) -> object:
         self.firstname=firstname
         self.lastname=lastname
         self.mobile=mobile

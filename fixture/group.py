@@ -1,4 +1,4 @@
-# задание к уроку 4
+# задание к уроку 4.3
 
 from model.group import Group
 
@@ -35,7 +35,7 @@ class GroupHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    def moify_first_group(self):
+    def modify_first_group(self):
         self.modify_group_by_index(0)
 
     def modify_group_by_index(self, index, new_group_data):

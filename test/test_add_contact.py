@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# задание к уроку 4
+# задание к уроку 4.3
 from model.contact import Contact
 
 
